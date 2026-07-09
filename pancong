@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaPro - Website Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span>MegaPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" onclick="playSound()"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#profile" class="nav-link" onclick="playSound()"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#service" class="nav-link" onclick="playSound()"><i class="fas fa-cogs"></i> Service</a></li>
+                <li><a href="#product" class="nav-link" onclick="playSound()"><i class="fas fa-box"></i> Product</a></li>
+                <li><a href="#gallery" class="nav-link" onclick="playSound()"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="#contact" class="nav-link" onclick="playSound()"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li>
+                    <a href="#cart" class="nav-link cart-link" onclick="playSound()">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" onclick="playSound()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Audio Element -->
+    <audio id="clickSound" preload="auto">
+        <source src="uploads/backsound.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Sound Upload Modal -->
+    <div id="soundModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-music"></i> Custom Backsound</h2>
+            <p>Upload file MP3 untuk mengganti suara klik</p>
+            <form id="soundUploadForm" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <input type="file" id="soundFile" name="soundFile" accept=".mp3">
+                    <label for="soundFile" class="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> Pilih File MP3
+                    </label>
+                    <span id="fileName">Tidak ada file dipilih</span>
+                </div>
+                <button type="submit" class="btn-primary" onclick="playSound()">
+                    <i class="fas fa-upload"></i> Upload & Set
+                </button>
+            </form>
+            <button class="btn-secondary" onclick="resetSound()">
+                <i class="fas fa-undo"></i> Reset Default
+            </button>
+        </div>
+    </div>
+
+    <!-- Sound Control Button -->
+    <button class="sound-control-btn" onclick="openSoundModal()" title="Custom Backsound">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <!-- Home Section -->
+    <section id="home" class="section hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Selamat Datang di <span>MegaPro</span></h1>
+            <p class="animate-text-delay">Solusi Digital Terbaik untuk Bisnis Anda</p>
+            <div class="hero-buttons">
+                <a href="#product" class="btn-primary" onclick="playSound()">Jelajahi Produk</a>
+                <a href="#contact" class="btn-secondary" onclick="playSound()">Hubungi Kami</a>
+            </div>
+        </div>
+        <div class="hero-image animate-float">
+            <i class="fas fa-rocket"></i>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="section">
+        <h2 class="section-title">Tentang Kami</h2>
+        <div class="profile-container">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>MegaPro Corporation</h3>
+                <p class="profile-tagline">Leading Digital Solutions Since 2020</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+                <p class="profile-description">
+                    Kami adalah perusahaan teknologi terdepan yang menyediakan solusi digital inovatif 
+                    untuk membantu bisnis Anda berkembang di era modern.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service" class="section bg-light">
+        <h2 class="section-title">Layanan Kami</h2>
+        <div class="services-grid">
+            <div class="service-card" onclick="playSound()">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Membangun website profesional dengan teknologi terkini</p>
+                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+            </div>
+            <div class="service-card" onclick="playSound()">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile Apps</h3>
+                <p>Pengembangan aplikasi mobile iOS dan Android</p>
+                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+            </div>
+            <div class="service-card" onclick="playSound()">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Services</h3>
+                <p>Solusi cloud computing untuk skalabilitas bisnis</p>
+                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+            </div>
+            <div class="service-card" onclick="playSound()">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cyber Security</h3>
+                <p>Proteksi keamanan digital terbaik</p>
+                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+            </div>
+            <div class="service-card" onclick="playSound()">
+                <i class="fas fa-chart-line"></i>
+                <h3>Digital Marketing</h3>
+                <p>Strategi pemasaran digital yang efektif</p>
+                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+            </div>
+            <div class="service-card" onclick="playSound()">
+                <i class="fas fa-robot"></i>
+                <h3>AI Solutions</h3>
+                <p>Implementasi kecerdasan buatan untuk bisnis</p>
+                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="section">
+        <h2 class="section-title">Produk Kami</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Website Pro</h3>
+                <p class="product-price">Rp 5.000.000</p>
+                <p>Website profesional dengan SEO optimization</p>
+                <button class="btn-primary add-to-cart" onclick="playSound(); addToCart('Website Pro', 5000000)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile App</h3>
+                <p class="product-price">Rp 15.000.000</p>
+                <p>Aplikasi mobile cross-platform</p>
+                <button class="btn-primary add-to-cart" onclick="playSound(); addToCart('Mobile App', 15000000)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Cloud Hosting</h3>
+                <p class="product-price">Rp 500.000/bln</p>
+                <p>Hosting cloud dengan uptime 99.9%</p>
+                <button class="btn-primary add-to-cart" onclick="playSound(); addToCart('Cloud Hosting', 500000)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p class="product-price">Rp 3.000.000</p>
+                <p>Desain interface modern dan user-friendly</p>
+                <button class="btn-primary add-to-cart" onclick="playSound(); addToCart('UI/UX Design', 3000000)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Database Solution</h3>
+                <p class="product-price">Rp 7.500.000</p>
+                <p>Sistem database terintegrasi</p>
+                <button class="btn-primary add-to-cart" onclick="playSound(); addToCart('Database Solution', 7500000)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>IT Support</h3>
+                <p class="product-price">Rp 2.000.000/bln</p>
+                <p>Dukungan teknis 24/7</p>
+                <button class="btn-primary add-to-cart" onclick="playSound(); addToCart('IT Support', 2000000)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section bg-light">
+        <h2 class="section-title">Galeri</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="playSound()">
+                <i class="fas fa-project-diagram"></i>
+                <div class="gallery-overlay">
+                    <h4>Project Alpha</h4>
+                    <p>Web Development</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="playSound()">
+                <i class="fas fa-mobile"></i>
+                <div class="gallery-overlay">
+                    <h4>Mobile Banking</h4>
+                    <p>Mobile App</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="playSound()">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <div class="gallery-overlay">
+                    <h4>Cloud Migration</h4>
+                    <p>Cloud Services</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="playSound()">
+                <i class="fas fa-shield-virus"></i>
+                <div class="gallery-overlay">
+                    <h4>Security Audit</h4>
+                    <p>Cyber Security</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="playSound()">
+                <i class="fas fa-bullhorn"></i>
+                <div class="gallery-overlay">
+                    <h4>Marketing Campaign</h4>
+                    <p>Digital Marketing</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="playSound()">
+                <i class="fas fa-brain"></i>
+                <div class="gallery-overlay">
+                    <h4>AI Integration</h4>
+                    <p>AI Solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Alamat</h4>
+                        <p>Jl. Teknologi No. 123, Jakarta</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telepon</h4>
+                        <p>+62 123 4567 890</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@megapro.com</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Subjek">
+                <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                <button type="submit" class="btn-primary" onclick="playSound()">
+                    <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="section bg-light">
+        <h2 class="section-title">Keranjang Belanja</h2>
+        <div class="cart-container">
+            <div id="cartItems">
+                <p class="empty-cart">Keranjang masih kosong</p>
+            </div>
+            <div class="cart-total" id="cartTotal" style="display: none;">
+                <h3>Total: <span id="totalAmount">Rp 0</span></h3>
+                <button class="btn-primary" onclick="playSound(); checkout()">
+                    <i class="fas fa-check"></i> Checkout
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MegaPro</h3>
+                <p>Solusi digital terpercaya untuk bisnis Anda.</p>
+                <div class="social-links">
+                    <a href="#" onclick="playSound()"><i class="fab fa-facebook"></i></a>
+                    <a href="#" onclick="playSound()"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="playSound()"><i class="fab fa-instagram"></i></a>
+                    <a href="#" onclick="playSound()"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home" onclick="playSound()">Home</a></li>
+                    <li><a href="#profile" onclick="playSound()">Profile</a></li>
+                    <li><a href="#service" onclick="playSound()">Service</a></li>
+                    <li><a href="#product" onclick="playSound()">Product</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="#" onclick="playSound()">Web Development</a></li>
+                    <li><a href="#" onclick="playSound()">Mobile Apps</a></li>
+                    <li><a href="#" onclick="playSound()">Cloud Services</a></li>
+                    <li><a href="#" onclick="playSound()">Cyber Security</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MegaPro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #4F46E5;
+    --primary-dark: #3730A3;
+    --secondary: #10B981;
+    --accent: #F59E0B;
+    --dark: #1F2937;
+    --light: #F3F4F6;
+    --white: #FFFFFF;
+    --gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo i {
+    color: var(--accent);
+    animation: pulse 2s infinite;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--dark);
+    margin: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Section Styles */
+.section {
+    min-height: 100vh;
+    padding: 6rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bg-light {
+    background: var(--light);
+    max-width: 100%;
+    border-radius: 2rem;
+    margin: 2rem auto;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    min-height: 100vh;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #6B7280;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image {
+    font-size: 12rem;
+    color: var(--primary);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: white;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    background: var(--gradient);
+    color: white;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.profile-avatar {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.profile-card h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-tagline {
+    color: #6B7280;
+    margin-bottom: 2rem;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    color: #6B7280;
+}
+
+.profile-description {
+    color: #4B5563;
+    line-height: 1.8;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #6B7280;
+    margin-bottom: 1.5rem;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.product-card p {
+    color: #6B7280;
+    margin-bottom: 1.5rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    position: relative;
+    background: var(--gradient);
+    border-radius: 1.5rem;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gallery-item i {
+    font-size: 4rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    bottom: 0;
+}
+
+.gallery-item:hover i {
+    transform: scale(1.2);
+}
+
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(10px);
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.info-item h4 {
+    margin-bottom: 0.25rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 0.75rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Cart Section */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #6B7280;
+    font-size: 1.2rem;
+    padding: 3rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.cart-item-price {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.cart-item button {
+    background: #EF4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-item button:hover {
+    background: #DC2626;
+    transform: scale(1.05);
+}
+
+.cart-total {
+    text-align: right;
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.cart-total h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: white;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    max-width: 500px;
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #6B7280;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    color: var(--dark);
+    transform: rotate(90deg);
+}
+
+.file-upload {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.upload-btn {
+    background: var(--gradient);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.upload-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+/* Sound Control Button */
+.sound-control-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+    font-size: 1.5rem;
+}
+
+.sound-control-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark);
+    color: white;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #9CA3AF;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.animate-text {
+    animation: slideInLeft 1s ease;
+}
+
+.animate-text-delay {
+    animation: slideInLeft 1s ease 0.3s both;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        font-size: 8rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+// Cart functionality
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let currentSound = localStorage.getItem('customSound') || 'uploads/backsound.mp3';
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartDisplay();
+    updateSoundSource();
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+
+    // Active nav link on scroll
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const sections = document.querySelectorAll('section');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 100) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Sound upload form
+    document.getElementById('soundUploadForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        uploadSound();
+    });
+
+    // Close modal
+    document.querySelector('.close').addEventListener('click', closeSoundModal);
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        const modal = document.getElementById('soundModal');
+        if (e.target === modal) {
+            closeSoundModal();
+        }
+    });
+
+    // Contact form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        sendContactForm(this);
+    });
+
+    // Show file name when selected
+    document.getElementById('soundFile').addEventListener('change', function(e) {
+        const fileName = e.target.files[0] ? e.target.files[0].name : 'Tidak ada file dipilih';
+        document.getElementById('fileName').textContent = fileName;
+    });
+});
+
+// Play sound function
+function playSound() {
+    const audio = document.getElementById('clickSound');
+    audio.currentTime = 0;
+    audio.play().catch(error => {
+        console.log('Audio play failed:', error);
+    });
+}
+
+// Add to cart
+function addToCart(name, price) {
+    cart.push({ name, price, id: Date.now() });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    
+    // Show notification
+    showNotification(`${name} ditambahkan ke keranjang!`);
+}
+
+// Remove from cart
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+}
+
+// Update cart display
+function updateCartDisplay() {
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    const cartCount = document.querySelector('.cart-count');
+    
+    cartCount.textContent = cart.length;
+    
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="empty-cart">Keranjang masih kosong</p>';
+        cartTotal.style.display = 'none';
+    } else {
+        cartItems.innerHTML = cart.map(item => `
+            <div class="cart-item">
+                <div class="cart-item-info">
+                    <div class="cart-item-title">${item.name}</div>
+                    <div class="cart-item-price">Rp ${item.price.toLocaleString('id-ID')}</div>
+                </div>
+                <button onclick="removeFromCart(${item.id}); playSound()">
+                    <i class="fas fa-trash"></i> Hapus
+                </button>
+            </div>
+        `).join('');
+        
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        document.getElementById('totalAmount').textContent = `Rp ${total.toLocaleString('id-ID')}`;
+        cartTotal.style.display = 'block';
+    }
+}
+
+// Checkout function
+function checkout() {
+    if (cart.length === 0) {
+        alert('Keranjang masih kosong!');
+        return;
+    }
+    
+    if (confirm('Apakah Anda yakin ingin checkout?')) {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+        alert('Checkout berhasil! Terima kasih telah berbelanja.');
+    }
+}
+
+// Sound modal functions
+function openSoundModal() {
+    document.getElementById('soundModal').style.display = 'block';
+    playSound();
+}
+
+function closeSoundModal() {
+    document.getElementById('soundModal').style.display = 'none';
+}
+
+// Upload sound
+function uploadSound() {
+    const fileInput = document.getElementById('soundFile');
+    const file = fileInput.files[0];
+    
+    if (!file) {
+        alert('Pilih file MP3 terlebih dahulu!');
+        return;
+    }
+    
+    const formData = new FormData();
+    formData.append('soundFile', file);
+    
+    fetch('upload_sound.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            currentSound = data.file;
+            localStorage.setItem('customSound', currentSound);
+            updateSoundSource();
+            closeSoundModal();
+            alert('Backsound berhasil diupload!');
+        } else {
+            alert('Upload gagal: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan saat upload.');
+    });
+}
+
+// Reset sound to default
+function resetSound() {
+    currentSound = 'uploads/backsound.mp3';
+    localStorage.removeItem('customSound');
+    updateSoundSource();
+    closeSoundModal();
+    alert('Backsound direset ke default.');
+}
+
+// Update sound source
+function updateSoundSource() {
+    const audio = document.getElementById('clickSound');
+    audio.src = currentSound;
+    audio.load();
+}
+
+// Show notification
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.innerHTML = `
+        <i class="fas fa-check-circle"></i>
+        ${message}
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        z-index: 3000;
+        animation: slideInRight 0.3s ease, slideOutRight 0.3s ease 2.7s forwards;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}
+
+// Send contact form
+function sendContactForm(form) {
+    const formData = new FormData(form);
+    
+    fetch('backend.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Pesan berhasil dikirim!');
+            form.reset();
+        } else {
+            alert('Gagal mengirim pesan. Silakan coba lagi.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan. Silakan coba lagi.');
+    });
+}
+
+// Add custom animation styles
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOutRight {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
