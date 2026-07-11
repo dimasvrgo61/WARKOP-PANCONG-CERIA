@@ -253,72 +253,108 @@
             box-shadow: var(--shadow-hover);
         }
 
-        /* ===== PROFILE ===== */
+        /* ===== PROFILE - 2 KOLOM ===== */
         .profile-container {
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
         }
 
-        .profile-card {
+        .profile-left {
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+        }
+
+        .profile-left .polaroid {
             background: white;
-            border-radius: var(--radius);
-            padding: 3rem;
-            box-shadow: var(--shadow);
+            padding: 15px 15px 35px 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+            display: inline-block;
+        }
+
+        .profile-left .polaroid:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .profile-left .polaroid img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .profile-left .polaroid p {
             text-align: center;
+            margin-top: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1D1D1F;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-right {
+            flex: 1.5;
+            min-width: 280px;
             max-width: 600px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.04);
         }
 
-        .profile-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .profile-avatar {
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .profile-card h3 {
+        .profile-right h3 {
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: -0.01em;
             margin-bottom: 0.3rem;
         }
 
-        .profile-tagline {
+        .profile-right .tagline {
             font-size: 1rem;
             font-weight: 500;
             color: #86868B;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
-        .profile-stats {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 2rem;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: -0.01em;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #86868B;
-        }
-
-        .profile-description {
+        .profile-right .description {
             font-size: 1rem;
             font-weight: 500;
             line-height: 1.8;
             color: #424245;
+            margin-bottom: 2rem;
+        }
+
+        .profile-right .stats {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-right .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .profile-right .stat-item i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .profile-right .stat-item .stat-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .profile-right .stat-item .stat-label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #86868B;
         }
 
         /* ===== SERVICES ===== */
@@ -970,8 +1006,18 @@
                 font-size: 0.9rem;
             }
 
-            .profile-card {
-                padding: 2rem;
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-left .polaroid {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .profile-right .stats {
+                justify-content: center;
             }
 
             .modal-content {
@@ -993,6 +1039,12 @@
             .products-grid,
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .profile-right .stats {
+                gap: 1.5rem;
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -1068,65 +1120,48 @@
         </div>
     </section>
 
-    <!-- ===== PROFILE ===== -->
+    <!-- ===== PROFILE - 2 KOLOM ===== -->
     <section id="profile" class="section">
         <h2 class="section-title">Tentang <span class="highlight">Kami</span></h2>
-        
         <div class="profile-container">
-            <div class="profile-card">
-                <div class="profile-avatar"><!-- ===== POLAROID ===== -->
-<div style="display: flex; justify-content: center; margin-top: 2rem;">
-    <div style="
-        background: white;
-        padding: 15px 15px 35px 15px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        border-radius: 8px;
-        transform: rotate(-2deg);
-        transition: transform 0.3s ease;
-        max-width: 300px;
-        display: inline-block;
-    " onmouseover="this.style.transform='rotate(0deg) scale(1.02)'" onmouseout="this.style.transform='rotate(-2deg)'">
-        <img src="1.jpeg" alt="Warkop Pancong Ceria" style="
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            border-radius: 4px;
-        ">
-        <p style="
-            text-align: center;
-            margin-top: 12px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #1D1D1F;
-            letter-spacing: 0.5px;
-        ">
-            📸 WARKOP PANCONG CERIA
-        </p>
-    </div>
-</div>
-                    <i class="fas fa-utensils"></i>
+            <!-- Kiri: Foto Polaroid -->
+            <div class="profile-left">
+                <div class="polaroid">
+                    <img src="1.jpeg" alt="Warkop Pancong Ceria">
+                    <p>📸 WARKOP PANCONG CERIA</p>
                 </div>
+            </div>
+
+            <!-- Kanan: Deskripsi -->
+            <div class="profile-right">
                 <h3>WARKOP PANCONG CERIA</h3>
-                <p class="profile-tagline">Berdiri Sejak 2018</p>
-                <div class="profile-stats">
-                    <div class="stat">
-                        <span class="stat-number">8+</span>
-                        <span class="stat-label">Tahun</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">4.9</span>
-                        <span class="stat-label">Rating</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Buka</span>
-                    </div>
-                </div>
-                <p class="profile-description">
+                <p class="tagline">Berdiri Sejak 2018 • Pangkalan Jati</p>
+                <p class="description">
                     Warkop Pancong adalah tempat nongkrong yang menyajikan pancong dengan cita rasa tradisional dan pilihan topping kekinian. Ditemani kopi, teh, dan berbagai minuman segar, kami ingin menciptakan tempat yang nyaman untuk menikmati makanan enak sambil menghabiskan waktu bersama.
                 </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Tahun</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <div class="stat-number">4.9</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Buka</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
