@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WARKOP PANCONG CERIA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -35,7 +35,7 @@
             letter-spacing: 0.3px;
         }
 
-        /* Navbar */
+        /* ===== NAVBAR ===== */
         .navbar {
             position: fixed;
             top: 0;
@@ -57,7 +57,7 @@
 
         .logo {
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--primary);
             display: flex;
             align-items: center;
@@ -82,7 +82,7 @@
             padding: 0.4rem 0.9rem;
             border-radius: 0.5rem;
             transition: all 0.3s ease;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.9rem;
             letter-spacing: 0.3px;
         }
@@ -106,7 +106,7 @@
             align-items: center;
             justify-content: center;
             font-size: 0.65rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .hamburger {
@@ -124,7 +124,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Sections */
+        /* ===== SECTIONS ===== */
         .section {
             min-height: 100vh;
             padding: 6rem 2rem 4rem;
@@ -135,7 +135,7 @@
         .section-title {
             text-align: center;
             font-size: 2.2rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 3rem;
             background: var(--gradient);
             -webkit-background-clip: text;
@@ -151,7 +151,7 @@
             margin: 2rem auto;
         }
 
-        /* Hero */
+        /* ===== HERO ===== */
         .hero {
             display: flex;
             align-items: center;
@@ -163,7 +163,7 @@
 
         .hero-content h1 {
             font-size: 3.2rem;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 0.8rem;
             line-height: 1.2;
             letter-spacing: 1px;
@@ -178,8 +178,8 @@
 
         .hero-content p {
             font-size: 1.15rem;
-            font-weight: 300;
-            color: #6B7280;
+            font-weight: 400;
+            color: #4B5563;
             margin-bottom: 2rem;
             max-width: 700px;
             margin-left: auto;
@@ -194,11 +194,11 @@
             flex-wrap: wrap;
         }
 
-        /* Buttons */
+        /* ===== BUTTONS ===== */
         .btn-primary, .btn-secondary {
             padding: 0.85rem 2rem;
             border-radius: 3rem;
-            font-weight: 500;
+            font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-flex;
@@ -240,8 +240,8 @@
             color: white;
             border-radius: 2rem;
             text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
+            font-size: 0.85rem;
+            font-weight: 600;
             transition: all 0.3s ease;
             font-family: 'Poppins', sans-serif;
         }
@@ -251,7 +251,7 @@
             box-shadow: var(--shadow-hover);
         }
 
-        /* Profile */
+        /* ===== PROFILE ===== */
         .profile-container {
             display: flex;
             justify-content: center;
@@ -280,13 +280,13 @@
 
         .profile-card h3 {
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.3rem;
         }
 
         .profile-tagline {
             color: #6B7280;
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 2rem;
         }
 
@@ -298,23 +298,23 @@
 
         .stat-number {
             font-size: 1.8rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--primary);
         }
 
         .stat-label {
             color: #6B7280;
             font-size: 0.85rem;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         .profile-description {
             color: #4B5563;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.9;
         }
 
-        /* Services */
+        /* ===== SERVICES ===== */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -344,18 +344,18 @@
 
         .service-card h3 {
             font-size: 1.3rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .service-card p {
             color: #6B7280;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
         }
 
-        /* Products */
+        /* ===== PRODUCTS ===== */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -388,20 +388,20 @@
 
         .product-card h3 {
             font-size: 1.2rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.3rem;
         }
 
         .product-price {
             font-size: 1.3rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
 
         .product-card p {
             color: #6B7280;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 0.9rem;
             margin-bottom: 1.5rem;
         }
@@ -410,9 +410,10 @@
             width: 100%;
             justify-content: center;
             border-radius: 3rem;
+            font-weight: 600;
         }
 
-        /* Gallery */
+        /* ===== GALLERY ===== */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -458,17 +459,17 @@
         }
 
         .gallery-overlay h4 {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
         }
 
         .gallery-overlay p {
-            font-weight: 300;
+            font-weight: 400;
             font-size: 0.85rem;
             opacity: 0.9;
         }
 
-        /* Contact */
+        /* ===== CONTACT ===== */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -503,12 +504,12 @@
         }
 
         .info-item h4 {
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1rem;
         }
 
         .info-item p {
-            font-weight: 300;
+            font-weight: 400;
             font-size: 0.95rem;
             color: #6B7280;
         }
@@ -525,7 +526,7 @@
             border: 2px solid #E5E7EB;
             border-radius: 1rem;
             font-family: 'Poppins', sans-serif;
-            font-weight: 300;
+            font-weight: 400;
             transition: all 0.3s ease;
             font-size: 0.95rem;
         }
@@ -537,7 +538,13 @@
             box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.08);
         }
 
-        /* Cart */
+        .contact-form button {
+            font-weight: 600;
+            border-radius: 3rem;
+            justify-content: center;
+        }
+
+        /* ===== CART ===== */
         .cart-container {
             max-width: 800px;
             margin: 0 auto;
@@ -547,7 +554,7 @@
             text-align: center;
             color: #6B7280;
             font-size: 1.1rem;
-            font-weight: 300;
+            font-weight: 400;
             padding: 3rem;
         }
 
@@ -563,13 +570,13 @@
         }
 
         .cart-item-title {
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1rem;
         }
 
         .cart-item-price {
             color: var(--primary);
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .cart-item button {
@@ -579,7 +586,7 @@
             padding: 0.4rem 1rem;
             border-radius: 2rem;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 600;
             font-family: 'Poppins', sans-serif;
             font-size: 0.8rem;
             transition: all 0.3s ease;
@@ -601,11 +608,16 @@
 
         .cart-total h3 {
             font-size: 1.3rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 1rem;
         }
 
-        /* Modal */
+        .cart-total .btn-primary {
+            font-weight: 600;
+            border-radius: 3rem;
+        }
+
+        /* ===== MODAL ===== */
         .modal {
             display: none;
             position: fixed;
@@ -682,7 +694,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            font-weight: 500;
+            font-weight: 600;
             font-family: 'Poppins', sans-serif;
             font-size: 0.9rem;
         }
@@ -692,13 +704,23 @@
             box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
         }
 
+        .modal-content .btn-primary {
+            font-weight: 600;
+            border-radius: 3rem;
+        }
+
+        .modal-content .btn-secondary {
+            font-weight: 600;
+            border-radius: 3rem;
+        }
+
         #fileName {
             font-size: 0.85rem;
-            font-weight: 300;
+            font-weight: 400;
             color: #6B7280;
         }
 
-        /* Sound Control */
+        /* ===== SOUND CONTROL ===== */
         .sound-control-btn {
             position: fixed;
             bottom: 2rem;
@@ -721,7 +743,7 @@
             box-shadow: 0 8px 25px rgba(220, 38, 38, 0.35);
         }
 
-        /* Notification */
+        /* ===== NOTIFICATION ===== */
         .notification {
             position: fixed;
             top: 20px;
@@ -736,7 +758,7 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.95rem;
         }
 
@@ -750,7 +772,7 @@
             to { transform: translateX(100%); opacity: 0; }
         }
 
-        /* Footer */
+        /* ===== FOOTER ===== */
         .footer {
             background: var(--dark);
             color: white;
@@ -768,18 +790,18 @@
 
         .footer-section h3 {
             font-size: 1.4rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.8rem;
         }
 
         .footer-section h4 {
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.8rem;
         }
 
         .footer-section p {
-            font-weight: 300;
+            font-weight: 400;
             font-size: 0.95rem;
             opacity: 0.8;
         }
@@ -796,7 +818,7 @@
             color: #9CA3AF;
             text-decoration: none;
             transition: color 0.3s ease;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 0.9rem;
         }
 
@@ -834,11 +856,11 @@
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
             color: #9CA3AF;
-            font-weight: 300;
+            font-weight: 400;
             font-size: 0.9rem;
         }
 
-        /* Animations */
+        /* ===== ANIMATIONS ===== */
         .animate-text {
             animation: slideInLeft 1s ease;
         }
@@ -858,7 +880,7 @@
             }
         }
 
-        /* Responsive */
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
@@ -974,8 +996,8 @@
     <div id="soundModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2><i class="fas fa-music"></i> Custom Backsound</h2>
-            <p style="font-weight:300; color:#6B7280; margin-bottom:1rem;">Upload file MP3 untuk mengganti suara klik</p>
+            <h2 style="font-weight:700;"><i class="fas fa-music"></i> Custom Backsound</h2>
+            <p style="font-weight:400; color:#6B7280; margin-bottom:1rem;">Upload file MP3 untuk mengganti suara klik</p>
             <form id="soundUploadForm" enctype="multipart/form-data">
                 <div class="file-upload">
                     <input type="file" id="soundFile" name="soundFile" accept=".mp3">
