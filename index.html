@@ -15,14 +15,14 @@
         }
 
         :root {
-            --primary: #4F46E5;
-            --primary-dark: #3730A3;
+            --primary: #DC2626;
+            --primary-dark: #B91C1C;
             --secondary: #10B981;
             --accent: #F59E0B;
             --dark: #1F2937;
             --light: #F3F4F6;
             --white: #FFFFFF;
-            --gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            --gradient: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
             --shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
@@ -56,7 +56,7 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--primary);
             display: flex;
@@ -88,7 +88,7 @@
         .nav-link:hover,
         .nav-link.active {
             color: var(--primary);
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(185, 28, 28, 0.1) 100%);
         }
 
         .nav-link::after {
@@ -171,9 +171,10 @@
         .hero {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             gap: 4rem;
             min-height: 100vh;
+            text-align: center;
         }
 
         .hero-content h1 {
@@ -194,22 +195,15 @@
             font-size: 1.5rem;
             color: #6B7280;
             margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
-        }
-
-        .hero-image {
-            font-size: 12rem;
-            color: var(--primary);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+            justify-content: center;
         }
 
         /* Buttons */
@@ -230,12 +224,12 @@
         .btn-primary {
             background: var(--gradient);
             color: white;
-            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
         }
 
         .btn-secondary {
@@ -522,7 +516,7 @@
         .contact-form textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
         }
 
         /* Cart */
@@ -673,7 +667,7 @@
 
         .upload-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
         }
 
         /* Sound Control */
@@ -688,7 +682,7 @@
             color: white;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
             transition: all 0.3s ease;
             z-index: 999;
             font-size: 1.5rem;
@@ -696,7 +690,7 @@
 
         .sound-control-btn:hover {
             transform: scale(1.1) rotate(15deg);
-            box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
         }
 
         /* Notification */
@@ -816,10 +810,6 @@
             animation: slideInLeft 1s ease 0.3s both;
         }
 
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
         @keyframes slideInLeft {
             from {
                 transform: translateX(-100px);
@@ -863,10 +853,6 @@
                 font-size: 2.5rem;
             }
 
-            .hero-image {
-                font-size: 8rem;
-            }
-
             .hero-buttons {
                 justify-content: center;
             }
@@ -887,7 +873,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-crown"></i>
+                <i class="fas fa-utensils"></i>
                 <span>WARKOP PANCONG CERIA</span>
             </div>
             <ul class="nav-menu">
@@ -949,15 +935,12 @@
     <!-- ===== HOME ===== -->
     <section id="home" class="section hero">
         <div class="hero-content">
-            <h1 class="animate-text">PANCONG LUMER<span>BIKIN MELERRR</span></h1>
+            <h1 class="animate-text">PANCONG LUMER <span>BIKIN MELERRR</span></h1>
             <p class="animate-text-delay">Pancong lumer dengan cita rasa yang nikmat, Disajikan dengan berbagai toping favorit. Teman terbaik untuk bersantai dengan harga yang ramah dikantong.</p>
             <div class="hero-buttons">
                 <a href="#product" class="btn-primary">Jelajahi Produk</a>
                 <a href="#contact" class="btn-secondary">Hubungi Kami</a>
             </div>
-        </div>
-        <div class="hero-image animate-float">
-            <i class="fas fa-rocket"></i>
         </div>
     </section>
 
@@ -967,7 +950,7 @@
         <div class="profile-container">
             <div class="profile-card">
                 <div class="profile-avatar">
-                    <i class="fas fa-building"></i>
+                    <i class="fas fa-utensils"></i>
                 </div>
                 <h3>WARKOP PANCONG CERIA</h3>
                 <p class="profile-tagline">Berdiri Sejak 2018</p>
@@ -997,39 +980,39 @@
         <h2 class="section-title">Layanan Kami</h2>
         <div class="services-grid">
             <div class="service-card">
-                <i class="fas fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Membangun website profesional dengan teknologi terkini</p>
+                <i class="fas fa-utensils"></i>
+                <h3>Pancong Original</h3>
+                <p>Pancong klasik dengan rasa gurih dan manis alami</p>
                 <a href="#contact" class="btn-small">Pesan Sekarang</a>
             </div>
             <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile Apps</h3>
-                <p>Pengembangan aplikasi mobile iOS dan Android</p>
+                <i class="fas fa-ice-cream"></i>
+                <h3>Pancong Topping</h3>
+                <p>Pilihan topping coklat, keju, kacang, dan meses</p>
                 <a href="#contact" class="btn-small">Pesan Sekarang</a>
             </div>
             <div class="service-card">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud Services</h3>
-                <p>Solusi cloud computing untuk skalabilitas bisnis</p>
+                <i class="fas fa-mug-hot"></i>
+                <h3>Kopi & Teh</h3>
+                <p>Minuman hangat dan segar untuk teman bersantai</p>
                 <a href="#contact" class="btn-small">Pesan Sekarang</a>
             </div>
             <div class="service-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Cyber Security</h3>
-                <p>Proteksi keamanan digital terbaik</p>
+                <i class="fas fa-wifi"></i>
+                <h3>Free Wi-Fi</h3>
+                <p>Nikmati koneksi internet cepat selama di warkop</p>
                 <a href="#contact" class="btn-small">Pesan Sekarang</a>
             </div>
             <div class="service-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Digital Marketing</h3>
-                <p>Strategi pemasaran digital yang efektif</p>
+                <i class="fas fa-music"></i>
+                <h3>Live Music</h3>
+                <p>Acara musik akustik setiap akhir pekan</p>
                 <a href="#contact" class="btn-small">Pesan Sekarang</a>
             </div>
             <div class="service-card">
-                <i class="fas fa-robot"></i>
-                <h3>AI Solutions</h3>
-                <p>Implementasi kecerdasan buatan untuk bisnis</p>
+                <i class="fas fa-gift"></i>
+                <h3>Event & Promo</h3>
+                <p>Promo menarik dan event spesial setiap bulannya</p>
                 <a href="#contact" class="btn-small">Pesan Sekarang</a>
             </div>
         </div>
@@ -1037,59 +1020,59 @@
 
     <!-- ===== PRODUCT ===== -->
     <section id="product" class="section">
-        <h2 class="section-title">Produk Kami</h2>
+        <h2 class="section-title">Menu Pancong</h2>
         <div class="products-grid">
             <div class="product-card">
-                <div class="product-image"><i class="fas fa-laptop-code"></i></div>
-                <h3>Website Pro</h3>
-                <p class="product-price">Rp 5.000.000</p>
-                <p>Website profesional dengan SEO optimization</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Website Pro', 5000000)">
+                <div class="product-image"><i class="fas fa-utensils"></i></div>
+                <h3>Pancong Original</h3>
+                <p class="product-price">Rp 5.000</p>
+                <p>Pancong klasik dengan rasa gurih dan manis</p>
+                <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Original', 5000)">
                     <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
             </div>
             <div class="product-card">
-                <div class="product-image"><i class="fas fa-mobile-alt"></i></div>
-                <h3>Mobile App</h3>
-                <p class="product-price">Rp 15.000.000</p>
-                <p>Aplikasi mobile cross-platform</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Mobile App', 15000000)">
+                <div class="product-image"><i class="fas fa-ice-cream"></i></div>
+                <h3>Pancong Coklat</h3>
+                <p class="product-price">Rp 7.000</p>
+                <p>Pancong dengan topping coklat meleleh</p>
+                <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Coklat', 7000)">
                     <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
             </div>
             <div class="product-card">
-                <div class="product-image"><i class="fas fa-server"></i></div>
-                <h3>Cloud Hosting</h3>
-                <p class="product-price">Rp 500.000/bln</p>
-                <p>Hosting cloud dengan uptime 99.9%</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Cloud Hosting', 500000)">
+                <div class="product-image"><i class="fas fa-cheese"></i></div>
+                <h3>Pancong Keju</h3>
+                <p class="product-price">Rp 7.000</p>
+                <p>Pancong dengan topping keju creamy</p>
+                <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Keju', 7000)">
                     <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
             </div>
             <div class="product-card">
-                <div class="product-image"><i class="fas fa-paint-brush"></i></div>
-                <h3>UI/UX Design</h3>
-                <p class="product-price">Rp 3.000.000</p>
-                <p>Desain interface modern dan user-friendly</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('UI/UX Design', 3000000)">
+                <div class="product-image"><i class="fas fa-peanut"></i></div>
+                <h3>Pancong Kacang</h3>
+                <p class="product-price">Rp 7.000</p>
+                <p>Pancong dengan topping kacang gurih</p>
+                <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Kacang', 7000)">
                     <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
             </div>
             <div class="product-card">
-                <div class="product-image"><i class="fas fa-database"></i></div>
-                <h3>Database Solution</h3>
-                <p class="product-price">Rp 7.500.000</p>
-                <p>Sistem database terintegrasi</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Database Solution', 7500000)">
+                <div class="product-image"><i class="fas fa-mug-hot"></i></div>
+                <h3>Kopi Hitam</h3>
+                <p class="product-price">Rp 8.000</p>
+                <p>Kopi hitam khas dengan aroma kuat</p>
+                <button class="btn-primary add-to-cart" onclick="addToCart('Kopi Hitam', 8000)">
                     <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
             </div>
             <div class="product-card">
-                <div class="product-image"><i class="fas fa-headset"></i></div>
-                <h3>IT Support</h3>
-                <p class="product-price">Rp 2.000.000/bln</p>
-                <p>Dukungan teknis 24/7</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('IT Support', 2000000)">
+                <div class="product-image"><i class="fas fa-glass-whiskey"></i></div>
+                <h3>Es Teh Manis</h3>
+                <p class="product-price">Rp 6.000</p>
+                <p>Es teh manis segar untuk berbuka</p>
+                <button class="btn-primary add-to-cart" onclick="addToCart('Es Teh Manis', 6000)">
                     <i class="fas fa-cart-plus"></i> Add to Cart
                 </button>
             </div>
@@ -1098,48 +1081,48 @@
 
     <!-- ===== GALLERY ===== -->
     <section id="gallery" class="section bg-light">
-        <h2 class="section-title">Galeri</h2>
+        <h2 class="section-title">Galeri Kami</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <i class="fas fa-project-diagram"></i>
+                <i class="fas fa-utensils"></i>
                 <div class="gallery-overlay">
-                    <h4>Project Alpha</h4>
-                    <p>Web Development</p>
+                    <h4>Pancong Original</h4>
+                    <p>Cita rasa klasik</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <i class="fas fa-mobile"></i>
+                <i class="fas fa-ice-cream"></i>
                 <div class="gallery-overlay">
-                    <h4>Mobile Banking</h4>
-                    <p>Mobile App</p>
+                    <h4>Pancong Coklat</h4>
+                    <p>Topping meleleh</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <i class="fas fa-cloud-upload-alt"></i>
+                <i class="fas fa-cheese"></i>
                 <div class="gallery-overlay">
-                    <h4>Cloud Migration</h4>
-                    <p>Cloud Services</p>
+                    <h4>Pancong Keju</h4>
+                    <p>Creamy dan gurih</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <i class="fas fa-shield-virus"></i>
+                <i class="fas fa-mug-hot"></i>
                 <div class="gallery-overlay">
-                    <h4>Security Audit</h4>
-                    <p>Cyber Security</p>
+                    <h4>Kopi Nikmat</h4>
+                    <p>Minuman hangat</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <i class="fas fa-bullhorn"></i>
+                <i class="fas fa-users"></i>
                 <div class="gallery-overlay">
-                    <h4>Marketing Campaign</h4>
-                    <p>Digital Marketing</p>
+                    <h4>Suasana Warkop</h4>
+                    <p>Nongkrong asyik</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <i class="fas fa-brain"></i>
+                <i class="fas fa-music"></i>
                 <div class="gallery-overlay">
-                    <h4>AI Integration</h4>
-                    <p>AI Solutions</p>
+                    <h4>Live Music</h4>
+                    <p>Hiburan akhir pekan</p>
                 </div>
             </div>
         </div>
@@ -1154,21 +1137,21 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>Alamat</h4>
-                        <p>Jl. Teknologi No. 123, Jakarta</p>
+                        <p>Jl. Kuliner No. 45, Jakarta Selatan</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div>
                         <h4>Telepon</h4>
-                        <p>+62 123 4567 890</p>
+                        <p>+62 812 3456 7890</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h4>Email</h4>
-                        <p>info@megapro.com</p>
+                        <p>info@warkoppancong.com</p>
                     </div>
                 </div>
             </div>
@@ -1204,13 +1187,13 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>MegaPro</h3>
-                <p>Solusi digital terpercaya untuk bisnis Anda.</p>
+                <h3>WARKOP PANCONG CERIA</h3>
+                <p>Nikmati pancong lumer dengan berbagai topping favorit.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-section">
@@ -1223,17 +1206,17 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Layanan</h4>
+                <h4>Menu</h4>
                 <ul>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Mobile Apps</a></li>
-                    <li><a href="#">Cloud Services</a></li>
-                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">Pancong Original</a></li>
+                    <li><a href="#">Pancong Coklat</a></li>
+                    <li><a href="#">Pancong Keju</a></li>
+                    <li><a href="#">Kopi & Teh</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 MegaPro. All rights reserved.</p>
+            <p>&copy; 2024 WARKOP PANCONG CERIA. All rights reserved.</p>
         </div>
     </footer>
 
