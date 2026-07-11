@@ -100,26 +100,6 @@
             background: rgba(220, 38, 38, 0.06);
         }
 
-        .cart-link {
-            position: relative;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -6px;
-            right: -4px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.65rem;
-            font-weight: 700;
-        }
-
         .hamburger {
             display: none;
             flex-direction: column;
@@ -186,6 +166,7 @@
             letter-spacing: -0.02em;
             line-height: 1.1;
             margin-bottom: 0.8rem;
+            white-space: nowrap;
         }
 
         .hero-content h1 span {
@@ -964,6 +945,7 @@
 
             .hero-content h1 {
                 font-size: 2.8rem;
+                white-space: normal;
             }
 
             .hero-content p {
@@ -1001,6 +983,7 @@
         @media (max-width: 480px) {
             .hero-content h1 {
                 font-size: 2.2rem;
+                white-space: normal;
             }
 
             .section {
@@ -1030,12 +1013,6 @@
                 <li><a href="#product" class="nav-link"><i class="fas fa-box"></i> Product</a></li>
                 <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
                 <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li>
-                    <a href="#cart" class="nav-link cart-link">
-                        <i class="fas fa-shopping-cart"></i> Cart
-                        <span class="cart-count">0</span>
-                    </a>
-                </li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -1082,7 +1059,7 @@
     <!-- ===== HOME ===== -->
     <section id="home" class="section hero">
         <div class="hero-content">
-            <h1 class="animate-text">Pancong Lumer <span>Bikin Melerrr</span></h1>
+            <h1 class="animate-text">PANCONG LUMER <span>BIKIN MELERRR</span></h1>
             <p class="animate-text-delay">Pancong lumer dengan cita rasa yang nikmat, disajikan dengan berbagai toping favorit. Teman terbaik untuk bersantai dengan harga yang ramah di kantong.</p>
             <div class="hero-buttons">
                 <a href="#product" class="btn-primary"><i class="fas fa-shopping-bag"></i> Jelajahi Menu</a>
@@ -1397,9 +1374,6 @@
         function updateCartDisplay() {
             const cartItems = document.getElementById('cartItems');
             const cartTotal = document.getElementById('cartTotal');
-            const cartCount = document.querySelector('.cart-count');
-            
-            cartCount.textContent = cart.length;
             
             if (cart.length === 0) {
                 cartItems.innerHTML = '<p class="empty-cart">Keranjang masih kosong</p>';
