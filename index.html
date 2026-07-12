@@ -273,7 +273,7 @@
         /* ===== POLAROID STYLE ===== */
         .polaroid {
             background: white;
-            padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+            padding: 0.8rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08), 0 10px 30px rgba(0, 0, 0, 0.04);
             border-radius: 4px;
             transform: rotate(-2deg);
@@ -478,6 +478,7 @@
             text-align: center;
             transition: all 0.3s ease;
             border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
         }
 
         .product-card:hover {
@@ -521,6 +522,108 @@
             width: 100%;
             justify-content: center;
             border-radius: var(--radius-full);
+        }
+
+        /* ===== BEST SELLER CARD ===== */
+        .best-seller-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .best-seller-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .best-seller-card .product-photo {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .best-seller-card .best-seller-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1.5rem 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.02em;
+            border-radius: 0 var(--radius-full) var(--radius-full) 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+        }
+
+        .best-seller-badge i {
+            font-size: 0.9rem;
+        }
+
+        .best-seller-card .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .best-seller-card .card-body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.005em;
+            margin-bottom: 0.3rem;
+        }
+
+        .best-seller-card .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.005em;
+            margin-bottom: 0.5rem;
+        }
+
+        .best-seller-card .card-body p {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #86868B;
+            margin-bottom: 1.5rem;
+        }
+
+        .best-seller-card .add-to-cart {
+            width: 100%;
+            justify-content: center;
+            border-radius: var(--radius-full);
+        }
+
+        /* ===== THUMB ICON ON PHOTO ===== */
+        .thumb-icon {
+            position: absolute;
+            top: 60px;
+            right: 16px;
+            background: var(--accent);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 2;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+            transition: all 0.3s ease;
+        }
+
+        .best-seller-card:hover .thumb-icon {
+            transform: scale(1.1) rotate(-10deg);
+            box-shadow: 0 6px 18px rgba(245, 158, 11, 0.5);
         }
 
         /* ===== GALLERY ===== */
@@ -1348,61 +1451,90 @@
 
     <!-- ===== PRODUCT ===== -->
     <section id="product" class="section">
-        <h2 class="section-title">Menu <span class="highlight">Pancong</span></h2>
+        <h2 class="section-title">Menu <span class="highlight">Best Seller</span></h2>
         <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image"><i class="fas fa-utensils"></i></div>
-                <h3>Pancong Original</h3>
-                <p class="product-price">Rp 5.000</p>
-                <p>Pancong klasik dengan rasa gurih dan manis</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Original', 5000)">
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                </button>
+            <!-- Best Seller 1: Pancong Coklat -->
+            <div class="best-seller-card">
+                <div style="position: relative;">
+                    <img src="pancong-coklat.jpg" alt="Pancong Coklat" class="product-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:220px;background:linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);display:flex;align-items:center;justify-content:center;\'><i class=\'fas fa-utensils\' style=\'font-size:4rem;color:white;\'></i></div>';">
+                    <div class="best-seller-badge">
+                        <i class="fas fa-fire"></i> Best Seller
+                    </div>
+                    <div class="thumb-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Pancong Coklat Lumer</h3>
+                    <p class="product-price">Rp 7.000</p>
+                    <p>Pancong dengan topping coklat meleleh yang bikin ketagihan</p>
+                    <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Coklat Lumer', 7000)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
             </div>
-            <div class="product-card">
-                <div class="product-image"><i class="fas fa-ice-cream"></i></div>
-                <h3>Pancong Coklat</h3>
-                <p class="product-price">Rp 7.000</p>
-                <p>Pancong dengan topping coklat meleleh</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Coklat', 7000)">
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                </button>
+
+            <!-- Best Seller 2: Pancong Keju -->
+            <div class="best-seller-card">
+                <div style="position: relative;">
+                    <img src="pancong-keju.jpg" alt="Pancong Keju" class="product-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:220px;background:linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);display:flex;align-items:center;justify-content:center;\'><i class=\'fas fa-cheese\' style=\'font-size:4rem;color:white;\'></i></div>';">
+                    <div class="best-seller-badge">
+                        <i class="fas fa-fire"></i> Best Seller
+                    </div>
+                    <div class="thumb-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Pancong Keju Creamy</h3>
+                    <p class="product-price">Rp 7.000</p>
+                    <p>Pancong dengan topping keju creamy yang gurih dan nikmat</p>
+                    <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Keju Creamy', 7000)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
             </div>
-            <div class="product-card">
-                <div class="product-image"><i class="fas fa-cheese"></i></div>
-                <h3>Pancong Keju</h3>
-                <p class="product-price">Rp 7.000</p>
-                <p>Pancong dengan topping keju creamy</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Keju', 7000)">
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                </button>
+
+            <!-- Best Seller 3: Kopi Susu -->
+            <div class="best-seller-card">
+                <div style="position: relative;">
+                    <img src="kopi-susu.jpg" alt="Kopi Susu" class="product-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:220px;background:linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);display:flex;align-items:center;justify-content:center;\'><i class=\'fas fa-coffee\' style=\'font-size:4rem;color:white;\'></i></div>';">
+                    <div class="best-seller-badge">
+                        <i class="fas fa-fire"></i> Best Seller
+                    </div>
+                    <div class="thumb-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Kopi Susu Gula Aren</h3>
+                    <p class="product-price">Rp 10.000</p>
+                    <p>Kopi susu creamy dengan gula aren asli yang legit</p>
+                    <button class="btn-primary add-to-cart" onclick="addToCart('Kopi Susu Gula Aren', 10000)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
             </div>
-            <div class="product-card">
-                <div class="product-image"><i class="fas fa-mug-hot"></i></div>
-                <h3>Kopi Hitam</h3>
-                <p class="product-price">Rp 8.000</p>
-                <p>Kopi hitam khas dengan aroma kuat</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Kopi Hitam', 8000)">
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                </button>
-            </div>
-            <div class="product-card">
-                <div class="product-image"><i class="fas fa-glass-whiskey"></i></div>
-                <h3>Es Teh Manis</h3>
-                <p class="product-price">Rp 6.000</p>
-                <p>Es teh manis segar untuk berbuka</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Es Teh Manis', 6000)">
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                </button>
-            </div>
-            <div class="product-card">
-                <div class="product-image"><i class="fas fa-coffee"></i></div>
-                <h3>Kopi Susu</h3>
-                <p class="product-price">Rp 10.000</p>
-                <p>Kopi susu creamy dengan rasa yang pas</p>
-                <button class="btn-primary add-to-cart" onclick="addToCart('Kopi Susu', 10000)">
-                    <i class="fas fa-cart-plus"></i> Add to Cart
-                </button>
+
+            <!-- Best Seller 4: Pancong Matcha -->
+            <div class="best-seller-card">
+                <div style="position: relative;">
+                    <img src="pancong-matcha.jpg" alt="Pancong Matcha" class="product-photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:220px;background:linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);display:flex;align-items:center;justify-content:center;\'><i class=\'fas fa-leaf\' style=\'font-size:4rem;color:white;\'></i></div>';">
+                    <div class="best-seller-badge">
+                        <i class="fas fa-fire"></i> Best Seller
+                    </div>
+                    <div class="thumb-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3>Pancong Matcha</h3>
+                    <p class="product-price">Rp 9.000</p>
+                    <p>Pancong dengan topping matcha premium yang lumer di mulut</p>
+                    <button class="btn-primary add-to-cart" onclick="addToCart('Pancong Matcha', 9000)">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
             </div>
         </div>
     </section>
