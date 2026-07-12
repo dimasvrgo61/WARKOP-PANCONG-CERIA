@@ -273,7 +273,7 @@
         /* ===== POLAROID STYLE ===== */
         .polaroid {
             background: white;
-            padding: 1rem 1rem 2.5rem 1rem;
+            padding: 0.8rem 0.8rem 0.8rem 0.8rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08), 0 10px 30px rgba(0, 0, 0, 0.04);
             border-radius: 4px;
             transform: rotate(-2deg);
@@ -298,25 +298,6 @@
 
         .polaroid:hover img {
             filter: sepia(0) contrast(1);
-        }
-
-        .polaroid-caption {
-            text-align: center;
-            margin-top: 1rem;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
-            color: #2D2D2F;
-            letter-spacing: 0.02em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.4rem;
-        }
-
-        .polaroid-caption i {
-            color: var(--primary);
-            font-size: 0.9rem;
         }
 
         .polaroid-stack {
@@ -1171,18 +1152,15 @@
         </div>
     </section>
 
-    <!-- ===== PROFILE - DENGAN POLAROID ===== -->
+    <!-- ===== PROFILE - DENGAN POLAROID (TANPA CAPTION) ===== -->
     <section id="profile" class="section">
         <h2 class="section-title">Tentang <span class="highlight">Kami</span></h2>
         <div class="profile-container">
-            <!-- Kiri: Polaroid Warkop -->
+            <!-- Kiri: Polaroid Warkop (Hanya Foto) -->
             <div class="profile-left">
                 <div class="polaroid-stack">
                     <div class="polaroid">
                         <img src="1.jpeg" alt="Warkop Pancong Ceria">
-                        <div class="polaroid-caption">
-                            <i class="fas fa-heart"></i> Warkop Pancong Ceria <i class="fas fa-heart"></i>
-                        </div>
                     </div>
                 </div>
             </div>
