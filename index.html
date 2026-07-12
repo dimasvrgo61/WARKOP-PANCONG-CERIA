@@ -390,47 +390,77 @@
             color: #86868B;
         }
 
-        /* ===== SERVICES ===== */
-        .services-grid {
+        /* ===== REVIEWS ===== */
+        .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .service-card {
+        .review-card {
             background: white;
             padding: 2rem;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
-            text-align: center;
             transition: all 0.3s ease;
-            cursor: pointer;
             border: 1px solid rgba(0, 0, 0, 0.04);
+            position: relative;
         }
 
-        .service-card:hover {
+        .review-card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-hover);
         }
 
-        .service-card i {
-            font-size: 3rem;
-            color: var(--primary);
+        .review-card .quote-icon {
+            font-size: 2rem;
+            color: rgba(220, 38, 38, 0.15);
             margin-bottom: 1rem;
         }
 
-        .service-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            letter-spacing: -0.005em;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-card p {
+        .review-card .review-text {
             font-size: 0.95rem;
             font-weight: 500;
-            color: #86868B;
+            color: #424245;
+            line-height: 1.8;
             margin-bottom: 1.5rem;
+        }
+
+        .review-card .review-stars {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .review-card .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .review-card .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .review-card .reviewer-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+
+        .review-card .reviewer-date {
+            font-size: 0.8rem;
+            color: #86868B;
+            font-weight: 500;
         }
 
         /* ===== PRODUCTS ===== */
@@ -1069,7 +1099,7 @@
             }
 
             .products-grid,
-            .services-grid {
+            .reviews-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1093,7 +1123,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#profile" class="nav-link"><i class="fas fa-user"></i> Profile</a></li>
-                <li><a href="#service" class="nav-link"><i class="fas fa-cogs"></i> Service</a></li>
+                <li><a href="#service" class="nav-link"><i class="fas fa-star"></i> Ulasan</a></li>
                 <li><a href="#product" class="nav-link"><i class="fas fa-box"></i> Product</a></li>
                 <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
                 <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
@@ -1152,11 +1182,10 @@
         </div>
     </section>
 
-    <!-- ===== PROFILE - DENGAN POLAROID (TANPA CAPTION) ===== -->
+    <!-- ===== PROFILE - DENGAN POLAROID ===== -->
     <section id="profile" class="section">
         <h2 class="section-title">Tentang <span class="highlight">Kami</span></h2>
         <div class="profile-container">
-            <!-- Kiri: Polaroid Warkop (Hanya Foto) -->
             <div class="profile-left">
                 <div class="polaroid-stack">
                     <div class="polaroid">
@@ -1164,8 +1193,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Kanan: Deskripsi -->
             <div class="profile-right">
                 <h3>WARKOP PANCONG CERIA</h3>
                 <p class="tagline">Berdiri Sejak 2018 • Pangkalan Jati</p>
@@ -1199,45 +1226,122 @@
         </div>
     </section>
 
-    <!-- ===== SERVICE ===== -->
+    <!-- ===== ULASAN (SERVICE) ===== -->
     <section id="service" class="section bg-light">
-        <h2 class="section-title">Layanan <span class="highlight">Kami</span></h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-utensils"></i>
-                <h3>Pancong Original</h3>
-                <p>Pancong klasik dengan rasa gurih dan manis alami</p>
-                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+        <h2 class="section-title">Ulasan <span class="highlight">Pelanggan</span></h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p class="review-text">"Pancongnya lumer banget! Topping coklatnya banyak dan rasanya enak. Tempatnya juga nyaman buat nongkrong bareng teman-teman. Pasti balik lagi!"</p>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">RA</div>
+                    <div>
+                        <div class="reviewer-name">Rizky Ahmad</div>
+                        <div class="reviewer-date">2 minggu lalu</div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fas fa-ice-cream"></i>
-                <h3>Pancong Topping</h3>
-                <p>Pilihan topping coklat, keju, kacang, dan meses</p>
-                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+
+            <div class="review-card">
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p class="review-text">"Kopi susunya juara! Pancong original juga gurih banget. Harga terjangkau, pelayanan ramah. Cocok buat kerja sambil ngopi."</p>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">SP</div>
+                    <div>
+                        <div class="reviewer-name">Sari Putri</div>
+                        <div class="reviewer-date">1 minggu lalu</div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fas fa-mug-hot"></i>
-                <h3>Kopi & Teh</h3>
-                <p>Minuman hangat dan segar untuk teman bersantai</p>
-                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+
+            <div class="review-card">
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p class="review-text">"Pancong kejunya creamy parah! Tempatnya instagramable, cocok buat yang suka foto-foto. Recommended banget!"</p>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">DN</div>
+                    <div>
+                        <div class="reviewer-name">Dian Nugroho</div>
+                        <div class="reviewer-date">3 hari lalu</div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fas fa-wifi"></i>
-                <h3>Free Wi-Fi</h3>
-                <p>Nikmati koneksi internet cepat selama di warkop</p>
-                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+
+            <div class="review-card">
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p class="review-text">"Es teh manisnya seger banget, apalagi pas siang hari. Pancong coklat + keju combo terbaik! Free Wi-Fi juga kenceng."</p>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">AM</div>
+                    <div>
+                        <div class="reviewer-name">Ayu Mandasari</div>
+                        <div class="reviewer-date">5 hari lalu</div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fas fa-music"></i>
-                <h3>Live Music</h3>
-                <p>Acara musik akustik setiap akhir pekan</p>
-                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+
+            <div class="review-card">
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p class="review-text">"Live music tiap sabtu bikin suasana makin asik. Pancongnya selalu fresh dari cetakan. Jadi langganan di sini!"</p>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">BS</div>
+                    <div>
+                        <div class="reviewer-name">Bayu Setiawan</div>
+                        <div class="reviewer-date">1 bulan lalu</div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fas fa-gift"></i>
-                <h3>Event & Promo</h3>
-                <p>Promo menarik dan event spesial setiap bulannya</p>
-                <a href="#contact" class="btn-small">Pesan Sekarang</a>
+
+            <div class="review-card">
+                <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+                <p class="review-text">"Bawa keluarga ke sini, anak-anak suka pancong coklatnya. Tempatnya bersih, stafnya ramah. Harga bersahabat!"</p>
+                <div class="review-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">RW</div>
+                    <div>
+                        <div class="reviewer-name">Ratna Wulandari</div>
+                        <div class="reviewer-date">2 bulan lalu</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1425,7 +1529,7 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#profile">Profile</a></li>
-                    <li><a href="#service">Service</a></li>
+                    <li><a href="#service">Ulasan</a></li>
                     <li><a href="#product">Product</a></li>
                 </ul>
             </div>
